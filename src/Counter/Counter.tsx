@@ -8,6 +8,8 @@ function Counter(
     }:
     {
         item: TransactionItem;
+        //Since count is internal to component, parent needs to know what count is (for this implementation)
+        //so this is just the communication line
         onChangeCallback: (incomingItem: TransactionItem, count: number) => void;
     }
 ){
@@ -19,6 +21,7 @@ function Counter(
     setCount(count => count + 1);
   };
 
+  //don't decrement past 0
   const handleDecrement = () => {
     if(count > 0){
       onChangeCallback(item, count - 1);
@@ -36,6 +39,7 @@ function Counter(
   );
 }
 
+//This could go in a css file as well, this is just my personal preference
 const styles = {
   button: {
     height: 20,

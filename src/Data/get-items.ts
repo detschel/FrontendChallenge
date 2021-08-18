@@ -1,5 +1,6 @@
 import {Item} from './Item';
-
+//This would normally be where we get the data. Can be done via redux or any other state management
+//I just mocked the response for this implementation
 export const getItems = () => {
     let data = new Array<Item>();
     data.push({
@@ -17,7 +18,7 @@ export const getItems = () => {
         price: 7});
     return data;
 }
-
+//This is just here for the purpose of this challenge to pre-populate selected items
 export const populateTransactionItems = () => {
     return [
         {

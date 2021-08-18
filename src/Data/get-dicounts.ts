@@ -1,5 +1,7 @@
 import {Discount} from './Item';
 
+//This would normally be where we get the data. Can be done via redux or any other state management
+//I just mocked the response for this implementation
 export const getDiscounts = () => {
     let discounts = new Array<Discount>();
     discounts.push({
